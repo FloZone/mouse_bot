@@ -1,4 +1,5 @@
 import contextlib
+from os import path
 import random
 import sys
 import time
@@ -7,8 +8,8 @@ from infi.systray import SysTrayIcon
 import keyboard
 import pyautogui
 
-ICON_RUN = "color.ico"
-ICON_PAUSE = "grey.ico"
+ICON_RUN = path.abspath(path.join(path.dirname(__file__), "color.ico"))
+ICON_PAUSE = path.abspath(path.join(path.dirname(__file__), "grey.ico"))
 OFFSET_MIN = -150
 OFFSET_MAX = 150
 DELAY_MIN = 1
